@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Ángel Novillo</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/css/simple-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-img@latest/css/simple-img.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,6 +14,14 @@
     <header>
       <div class="container header-container">
         <h1 class="logo">Ángel Novillo</h1>
+        <div class="subtitle-wrapper">
+          <div class="rotating-words">
+            <span>Full-Stack</span>
+            <span>Front-End</span>
+            <span>Back-End</span>
+          </div>
+          <span class="static-text">.NET Developer</span>
+        </div>
         <nav>
           <ul id="menu">
             <li><a href="#about">Sobre mí</a></li>
@@ -29,15 +37,53 @@
   <!-- Sección Sobre mí -->
   <section id="about">
     <div class="container">
-      <h2>Sobre mí</h2>
+      <h2>
+        <span class="bracket">{</span>Sobre mí<span class="bracket">}</span>
+      </h2>
       <p>Apasionado de la programación y el ciclismo, desarrollo aplicaciones multiplataforma con enfoque en experiencia de usuario y rendimiento.</p>
     </div>
   </section>
 
+  <!-- Sección Stack tecnologico -->
+  <section id="stack-tecnologico">
+    <h2>
+      <span class="bracket">{</span>Stack tecnológico<span class="bracket">}</span>
+    </h2>
+
+    <div class="stack-section">
+      <h3><span class="bracket">[</span>Tecnologías<span class="bracket">]</span></h3>
+      <div class="icons-row">
+        <img src="img/logo_csharp.png" alt="C#" title="C#" />
+        <img src="img/logo_net.png" alt=".NET" title=".NET" />
+        <img src="img/logo_maui.png" alt="MAUI" title="MAUI" />
+        <img src="img/logo_blazor.png" alt="Blazor" title="Blazor" />
+        <img src="img/logo_html.png" alt="HTML" title="HTML" />
+        <img src="img/logo_css.png" alt="CSS" title="CSS" />
+        <img src="img/logo_sqlserver.png" alt="SQL Server" title="SQL Server" />
+      </div>
+    </div>
+
+    <div class="stack-section">
+      <h3><span class="bracket">[</span>Herramientas<span class="bracket">]</span></h3>
+      <div class="icons-row">
+        <img src="img/logo_vs.png" alt="Visual Studio" title="Visual Studio" />
+        <img src="img/logo_vscode.png" alt="Visual Studio Code" title="Visual Studio Code" />
+        <img src="img/logo_sqlmanag.png" alt="Microsoft SQL Server Management Studio" title="Microsoft SQL Server Management Studio" />
+        <img src="img/logo_comparer.png" alt="SQL Comparer" title="SQL Comparer" />
+        <img src="img/logo_bitbucket.png" alt="Bitbucket" title="Bitbucket" />
+        <img src="img/logo_playconsole.png" alt="Google Play Console" title="Google Play Console" />
+        <img src="img/logo_postman.png" alt="Postman" title="Postman" />
+      </div>
+    </div>
+  </section>
+
+
   <!-- Sección Proyectos -->
   <section id="projects">
     <div class="container">
-      <h2>Proyectos</h2>
+      <h2>
+        <span class="bracket">{</span>Proyectos<span class="bracket">}</span>
+      </h2>
       <div class="projects-grid">
         
         <div class="project">
@@ -54,8 +100,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -81,8 +127,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -108,8 +154,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -135,8 +181,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -162,8 +208,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -189,8 +235,8 @@
 
           <!-- Plataformas -->
           <div class="platforms">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" title="Android">
-            <img class="platform-icon" src="https://cdn.simpleicons.org/apple/000000" alt="iOS" title="iOS">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/android/3DDC84" alt="Android" title="Android">
+            <img class="platform-icon" src="https://cdn.simpleimg.org/apple/000000" alt="iOS" title="iOS">
             <img class="platform-icon" src="img/windows.svg" alt="Windows" title="Windows">
           </div>
 
@@ -208,7 +254,9 @@
   <!-- Sección Contacto -->
   <section id="contact">
     <div class="container">
-      <h2>Contacto</h2>
+      <h2>
+        <span class="bracket">{</span>Contacto<span class="bracket">}</span>
+      </h2>
       <p>Email: <a href="mailto:tucorreo@example.com">tucorreo@example.com</a></p>
       <p>LinkedIn: <a href="#">Tu perfil</a></p>
       <p>GitHub: <a href="#">Tu GitHub</a></p>
