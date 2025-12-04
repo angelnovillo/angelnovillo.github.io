@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-  color: #10B981;
+  color: #F472B6;
 }
 
 /* Contenedor central */
@@ -39,7 +39,8 @@ a:hover {
 
 /* Secciones */
 section {
-  padding: 80px 0;
+  padding: 50px 0;
+  scroll-margin-top: 85px;
 }
 
 /* Titulos */
@@ -216,6 +217,15 @@ nav li a:hover::after {
   cursor: pointer;
 }
 
+.tech-highlight {
+  font-weight: 700;        /* Negrita */
+  color: #A78BFA;          /* Color morado de tu paleta */
+}
+
+.justified-text {
+  text-align: justify;
+}
+
 /* Stack tecnológico */
 
 #stack-tecnologico {
@@ -301,6 +311,7 @@ nav li a:hover::after {
   border-radius: 10px;
 }
 
+
 /* Tecnologías */
 .technologies {
   display: flex;
@@ -379,7 +390,6 @@ footer {
   font-size: 1.05rem;
   color: #E5E5E5;
   text-align: center;
-  max-width: 700px;
   margin: auto;
 }
 
@@ -426,6 +436,38 @@ footer {
   transition: transform 0.5s ease;
   transform: translateX(-5px);
 }
+
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;   /* centra verticalmente los elementos */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;   /* centra icono y texto verticalmente */
+  gap: 8px;
+  text-decoration: none;
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+.email-text {
+  color: #A78BFA; /* mismo color que tecnologías */
+  font-weight: 500;
+}
+
 
 /* Hover solo en desktop */
 @media (hover: hover) and (pointer: fine) {
@@ -507,6 +549,17 @@ footer {
 
   .about-text {
     max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contact-icons {
+    justify-content: center;
   }
 }
 
