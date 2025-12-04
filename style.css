@@ -11,6 +11,7 @@ body {
   color: #FFFFFF;
   background-color: #0F172A;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1, h3 {
@@ -88,18 +89,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  padding: 0 20px;
+  gap: 20px;
 }
 
-/* Logo con efecto de brillo */
+.title-wrapper {
+  display: flex;
+  flex-direction: column; /* apila subtitulo debajo del H1 */
+}
+
+/* H1 principal */
 header .logo {
   font-size: 2.2rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  text-shadow: 0 2px 8px rgba(59, 130, 246, 0.6);
-  position: relative;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Animación de entrada del logo */
@@ -129,18 +130,13 @@ header .logo:hover::after {
 
 /* Contenedor del subtítulo debajo del H1 */
 .subtitle-wrapper {
-  margin-top: 8px;
+  margin-top: 4px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
-
   font-size: 1.3rem;
-  font-weight: 600;
-
-  height: 30px; /* evita que el tamaño salte al rotar */
+  height: 30px;
   overflow: hidden;
-  color: #E2E8F0; /* tono claro para el fondo oscuro premium */
+  color: #E2E8F0;
 }
 
 /* Contenedor del texto animado */
@@ -248,6 +244,7 @@ nav li a:hover::after {
   margin-bottom: 20px;
 }
 
+/* Iconos del stack */
 .icons-row {
   display: flex;
   justify-content: center;
@@ -256,8 +253,9 @@ nav li a:hover::after {
 }
 
 .icons-row img {
-  height: 60px;
-  width: auto;
+  width: 60px;      /* ancho fijo */
+  height: 60px;     /* alto fijo */
+  object-fit: contain;
   transition: transform 0.3s, filter 0.3s;
   cursor: default;
 }
@@ -414,6 +412,26 @@ footer {
 
   header h1 {
     font-size: 1.8rem;
+  }
+
+  .header-container {
+    flex-direction: row; /* mantiene H1+subtitulo a la izquierda y hamburguesa a la derecha */
+    align-items: center;
+  }
+
+  .title-wrapper {
+    flex-direction: column;
+    align-items: flex-start; /* izquierda por defecto, o center si quieres centrarlo */
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  header .logo {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* corta con "..." si es demasiado largo */
   }
 }
 
