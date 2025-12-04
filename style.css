@@ -558,6 +558,10 @@ footer {
     gap: 20px;
   }
 
+  .about-image {
+    transform: translateX(0); 
+  }
+
   .contact-icons {
     justify-content: center;
   }
