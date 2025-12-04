@@ -383,6 +383,67 @@ footer {
   margin: auto;
 }
 
+.about-container .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* foto a la izquierda */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Texto centrado en el espacio disponible y justificado */
+.about-text {
+  flex: 1; /* ocupa todo el espacio restante */
+  color: #E5E5E5;
+  font-size: 1.05rem;
+  text-align: justify; /* justificado */
+  max-width: 100%; /* opcional, para que no se extienda demasiado */
+}
+
+.about-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #3B82F6;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%; 
+  transition: transform 0.5s ease;
+  transform: translateX(-5px);
+}
+
+.about-image:hover {
+  transform: scale(1.05) rotate(2deg) translateX(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.about-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Texto de experiencia debajo de la imagen */
+.experience-text {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #F472B6; /* azul de los subtítulos animados del header */
+  font-size: 1.3rem;
+}
+
 /* Media Queries para Responsivo */
 @media (max-width: 992px) {
   .projects-grid {
@@ -432,6 +493,17 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; /* corta con "..." si es demasiado largo */
+  }
+
+  .about-container .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
   }
 }
 
