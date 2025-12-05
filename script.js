@@ -30,3 +30,18 @@ window.addEventListener('scroll', () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById('toggle-projects');
+  const hiddenProjects = document.querySelectorAll('.hidden-project');
+  let expanded = false;
+
+  button.addEventListener('click', () => {
+    expanded = !expanded;
+
+    hiddenProjects.forEach(project => {
+      project.style.display = expanded ? 'block' : 'none';
+    });
+
+    button.textContent = expanded ? 'Ver menos' : 'Ver más';
+  });
+});

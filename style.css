@@ -258,13 +258,13 @@ nav li a:hover::after {
 .icons-row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 50px;
 }
 
 .icons-row img {
-  width: 60px;      /* ancho fijo */
-  height: 60px;     /* alto fijo */
+  width: 55px;      /* ancho fijo */
+  height: 55px;     /* alto fijo */
   object-fit: contain;
   transition: transform 0.3s, filter 0.3s;
   cursor: default;
@@ -311,6 +311,26 @@ nav li a:hover::after {
   border-radius: 10px;
 }
 
+.hidden-project {
+  display: none;
+}
+
+.toggle-projects-btn {
+  display: block;
+  margin: 20px auto 0 auto; /* centrado */
+  padding: 10px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.toggle-projects-btn:hover {
+  background-color: #2563EB;
+}
 
 /* Tecnologías */
 .technologies {
@@ -408,6 +428,8 @@ footer {
   font-size: 1.05rem;
   text-align: justify; /* justificado */
   max-width: 100%; /* opcional, para que no se extienda demasiado */
+  display: flex;
+  flex-direction: column;
 }
 
 .about-image-wrapper {
@@ -443,6 +465,7 @@ footer {
   align-items: center;   /* centra verticalmente los elementos */
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-icons a {
@@ -460,11 +483,15 @@ footer {
 }
 
 .contact-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
+}
+
+.contact-icons a:hover {
+  transform: scale(1.05);
 }
 
 .email-text {
-  color: #A78BFA; /* mismo color que tecnologías */
+  color: #FFFFFF; /* mismo color que tecnologías */
   font-weight: 500;
 }
 
@@ -564,6 +591,13 @@ footer {
 
   .contact-icons {
     justify-content: center;
+  }
+
+  .icons-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas → 2 filas */
+    gap: 20px;
+    justify-items: center;
   }
 }
 
