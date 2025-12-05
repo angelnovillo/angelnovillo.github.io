@@ -282,6 +282,20 @@ nav li a:hover::after {
   align-items: start;
 }
 
+/* --- ICONO + NOMBRE + PLATAFORMAS --- */
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .project {
   background-color: #1E293B;
   border-radius: 15px;
@@ -297,11 +311,12 @@ nav li a:hover::after {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
-.project-header {
+/* --- TECNOLOGÍAS + VER MÁS --- */
+.project-bottom {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  margin-top: auto;    /* Empuja al fondo vertical de la tarjeta */
 }
 
 .project-logo {
@@ -309,6 +324,17 @@ nav li a:hover::after {
   height: 50px;
   object-fit: contain;
   border-radius: 10px;
+}
+
+.project img,
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- TEXTO --- */
+.project p {
 }
 
 .hidden-project {
@@ -335,9 +361,7 @@ nav li a:hover::after {
 /* Tecnologías */
 .technologies {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 8px;
 }
 
 .technologies .tech {
@@ -351,8 +375,7 @@ nav li a:hover::after {
 /* Plataformas */
 .platforms {
   display: flex;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 10px;
 }
 
 .platform-icon {
@@ -370,7 +393,7 @@ nav li a:hover::after {
 /* Info SPA */
 .project-details {
   display: none;
-  margin-top: 15px;
+  margin: 15px 0;
   padding: 15px;
   background: #0F172A;
   border-left: 3px solid #3B82F6;
@@ -381,12 +404,51 @@ nav li a:hover::after {
   display: block;
 }
 
-/* Botón ver más */
+.tech {
+  background: #1E293B;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #A78BFA;
+  border: 1px solid #3B82F6;
+}
+
 .see-more {
-  margin-top: auto;
-  font-weight: bold;
-  color: #FACC15;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  color: #F472B6;
+  transition: transform 0.2s ease;
+}
+
+.see-more:hover {
+  transform: scale(1.05);
+}
+
+/* Galería horizontal */
+.gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+/* Estilo de scrollbar (opcional) */
+.gallery::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery::-webkit-scrollbar-thumb {
+  background: #A78BFA;
+  border-radius: 4px;
+}
+
+/* Imágenes responsivas */
+.gallery img {
+  height: 250px; /* Tamaño ideal para que no crezca verticalmente */
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  scroll-snap-align: start;
 }
 
 #contact p a {
@@ -598,6 +660,12 @@ footer {
     grid-template-columns: repeat(4, 1fr); /* 4 columnas → 2 filas */
     gap: 20px;
     justify-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+    height: 200px;
   }
 }
 
