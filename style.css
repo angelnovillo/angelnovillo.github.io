@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ h1, h3 {
   font-weight: 700;
 }
 
-/* Links */
 a {
   color: #3B82F6;
   text-decoration: none;
@@ -30,20 +28,17 @@ a:hover {
   color: #F472B6;
 }
 
-/* Contenedor central */
 .container {
   max-width: 1500px;
   margin: auto;
   padding: 20px;
 }
 
-/* Secciones */
 section {
   padding: 50px 0;
   scroll-margin-top: 85px;
 }
 
-/* Titulos */
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
@@ -65,16 +60,15 @@ h2::after {
 }
 
 h2 .bracket {
-  color: #38BDF8; /* azul de la paleta */
-  font-weight: 700; /* opcional, para resaltar */
+  color: #38BDF8; 
+  font-weight: 700; 
 }
 
 h3 .bracket {
-  color: #F97316; /* naranja H3 */
+  color: #F97316; 
   font-weight: 700;
 }
 
-/* Header principal */
 header {
   background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
   position: sticky;
@@ -85,7 +79,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Contenedor del header */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -95,16 +88,14 @@ header {
 
 .title-wrapper {
   display: flex;
-  flex-direction: column; /* apila subtitulo debajo del H1 */
+  flex-direction: column;
 }
 
-/* H1 principal */
 header .logo {
   font-size: 2.2rem;
   white-space: nowrap;
 }
 
-/* Animación de entrada del logo */
 header .logo::after {
   content: "";
   position: absolute;
@@ -124,12 +115,10 @@ header.scrolled {
   transition: all 0.3s ease;
 }
 
-
 header .logo:hover::after {
   left: 100%;
 }
 
-/* Contenedor del subtítulo debajo del H1 */
 .subtitle-wrapper {
   margin-top: 4px;
   display: flex;
@@ -140,7 +129,6 @@ header .logo:hover::after {
   color: #E2E8F0;
 }
 
-/* Contenedor del texto animado */
 .rotating-words {
   display: inline-block;
   height: 30px;
@@ -148,7 +136,6 @@ header .logo:hover::after {
   position: relative;
 }
 
-/* Cada palabra que rota */
 .rotating-words span {
   display: block;
   height: 30px;
@@ -156,7 +143,6 @@ header .logo:hover::after {
   animation: rotateWords 6s infinite;
 }
 
-/* Parte fija */
 .static-text {
   white-space: nowrap;
 }
@@ -171,7 +157,6 @@ header .logo:hover::after {
   66%      { color: #F472B6; }
 }
 
-/* Animación vertical */
 @keyframes rotateWords {
   0%   { transform: translateY(0); }
   33%  { transform: translateY(-100%); }
@@ -179,7 +164,6 @@ header .logo:hover::after {
   100% { transform: translateY(0); }
 }
 
-/* Menú */
 nav ul {
   list-style: none;
   display: flex;
@@ -193,7 +177,6 @@ nav li a {
   transition: color 0.3s ease;
 }
 
-/* Hover con animación de subrayado */
 nav li a::after {
   content: "";
   position: absolute;
@@ -209,7 +192,6 @@ nav li a:hover::after {
   width: 100%;
 }
 
-/* Icono de menú hamburguesa */
 #menu-toggle {
   display: none;
   font-size: 2rem;
@@ -218,20 +200,18 @@ nav li a:hover::after {
 }
 
 .tech-highlight {
-  font-weight: 700;        /* Negrita */
-  color: #A78BFA;          /* Color morado de tu paleta */
+  font-weight: 700;       
+  color: #A78BFA;         
 }
 
 .justified-text {
   text-align: justify;
 }
 
-/* Stack tecnológico */
-
 #stack-tecnologico {
   padding: 60px 20px;
-  background-color: #0F172A; /* fondo oscuro premium */
-  color: #E2E8F0; /* texto claro */
+  background-color: #0F172A; 
+  color: #E2E8F0; 
 }
 
 #stack-tecnologico h2 {
@@ -254,7 +234,6 @@ nav li a:hover::after {
   margin-bottom: 20px;
 }
 
-/* Iconos del stack */
 .icons-row {
   display: flex;
   justify-content: center;
@@ -263,8 +242,8 @@ nav li a:hover::after {
 }
 
 .icons-row img {
-  width: 55px;      /* ancho fijo */
-  height: 55px;     /* alto fijo */
+  width: 55px;     
+  height: 55px;  
   object-fit: contain;
   transition: transform 0.3s, filter 0.3s;
   cursor: default;
@@ -282,7 +261,6 @@ nav li a:hover::after {
   align-items: start;
 }
 
-/* --- ICONO + NOMBRE + PLATAFORMAS --- */
 .project-top {
   display: flex;
   justify-content: space-between;
@@ -311,18 +289,16 @@ nav li a:hover::after {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
-/* --- TECNOLOGÍAS + VER MÁS --- */
 .project-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;    /* Empuja al fondo vertical de la tarjeta */
+  margin-top: auto;   
 }
 
 .hidden-project .project-bottom {
-  margin-top: 25px;    /* Empuja al fondo vertical de la tarjeta */
+  margin-top: 25px;    
 }
-
 
 .project-logo {
   width: 50px;
@@ -344,7 +320,7 @@ nav li a:hover::after {
 
 .toggle-projects-btn {
   display: block;
-  margin: 20px auto 0 auto; /* centrado */
+  margin: 20px auto 0 auto;
   padding: 10px 20px;
   background-color: #3B82F6;
   color: white;
@@ -359,7 +335,6 @@ nav li a:hover::after {
   background-color: #2563EB;
 }
 
-/* Tecnologías */
 .technologies {
   display: flex;
   gap: 8px;
@@ -373,7 +348,6 @@ nav li a:hover::after {
   font-size: 0.85rem;
 }
 
-/* Plataformas */
 .platforms {
   display: flex;
   gap: 10px;
@@ -391,7 +365,6 @@ nav li a:hover::after {
   transform: scale(1.2);
 }
 
-/* Info SPA */
 .project-details {
   display: none;
   margin: 15px 0;
@@ -432,10 +405,9 @@ nav li a:hover::after {
 }
 
 .project.active .see-more .arrow {
-  transform: rotate(180deg); /* gira 180° cuando el proyecto está activo */
+  transform: rotate(180deg);
 }
 
-/* Galería horizontal */
 .gallery {
   display: flex;
   gap: 10px;
@@ -444,7 +416,6 @@ nav li a:hover::after {
   scroll-snap-type: x mandatory;
 }
 
-/* Estilo de scrollbar (opcional) */
 .gallery::-webkit-scrollbar {
   height: 6px;
 }
@@ -453,9 +424,9 @@ nav li a:hover::after {
   border-radius: 4px;
 }
 
-/* Imágenes responsivas */
+
 .gallery img {
-  height: 250px; /* Tamaño ideal para que no crezca verticalmente */
+  height: 250px; 
   width: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -470,7 +441,6 @@ nav li a:hover::after {
   color: #10B981;
 }
 
-/* Footer */
 footer {
   background-color: #1E293B;
   text-align: center;
@@ -489,18 +459,17 @@ footer {
 .about-container .about-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* foto a la izquierda */
+  justify-content: flex-start; 
   gap: 40px;
   flex-wrap: wrap;
 }
 
-/* Texto centrado en el espacio disponible y justificado */
 .about-text {
-  flex: 1; /* ocupa todo el espacio restante */
+  flex: 1; 
   color: #E5E5E5;
   font-size: 1.05rem;
-  text-align: justify; /* justificado */
-  max-width: 100%; /* opcional, para que no se extienda demasiado */
+  text-align: justify; 
+  max-width: 100%; 
   display: flex;
   flex-direction: column;
 }
@@ -535,7 +504,7 @@ footer {
 .contact-icons {
   margin-top: 20px;
   display: flex;
-  align-items: center;   /* centra verticalmente los elementos */
+  align-items: center;   
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -543,7 +512,7 @@ footer {
 
 .contact-icons a {
   display: flex;
-  align-items: center;   /* centra icono y texto verticalmente */
+  align-items: center;   
   gap: 8px;
   text-decoration: none;
 }
@@ -564,12 +533,10 @@ footer {
 }
 
 .email-text {
-  color: #FFFFFF; /* mismo color que tecnologías */
+  color: #FFFFFF; 
   font-weight: 500;
 }
 
-
-/* Hover solo en desktop */
 @media (hover: hover) and (pointer: fine) {
   .about-image:hover {
     transform: scale(1.05) rotate(2deg) translateX(-10px);
@@ -581,15 +548,13 @@ footer {
   }
 }
 
-/* Texto de experiencia debajo de la imagen */
 .experience-text {
   margin-top: 12px;
   font-weight: 700;
-  color: #F472B6; /* azul de los subtítulos animados del header */
+  color: #F472B6; 
   font-size: 1.3rem;
 }
 
-/* Media Queries para Responsivo */
 @media (max-width: 992px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -623,7 +588,7 @@ footer {
   }
 
   .technologies {
-    flex-shrink: 0; /* No se encoge demasiado */
+    flex-shrink: 0;
   }
 
   header h1 {
@@ -631,13 +596,13 @@ footer {
   }
 
   .header-container {
-    flex-direction: row; /* mantiene H1+subtitulo a la izquierda y hamburguesa a la derecha */
+    flex-direction: row;
     align-items: center;
   }
 
   .title-wrapper {
     flex-direction: column;
-    align-items: flex-start; /* izquierda por defecto, o center si quieres centrarlo */
+    align-items: flex-start;
   }
 
   #menu-toggle {
@@ -647,7 +612,7 @@ footer {
   header .logo {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* corta con "..." si es demasiado largo */
+  text-overflow: ellipsis; 
   }
 
   .about-container .about-content {
@@ -678,7 +643,7 @@ footer {
 
   .icons-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas → 2 filas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     justify-items: center;
   }

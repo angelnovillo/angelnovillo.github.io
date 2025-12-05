@@ -1,4 +1,3 @@
-// Toggle menú
 const toggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
@@ -6,7 +5,6 @@ toggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-// SPA: Mostrar solo un proyecto a la vez
 const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
@@ -16,8 +14,6 @@ projects.forEach(project => {
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-
-    // Cierra otros proyectos
     projects.forEach(p => {
       if(p !== project) {
         p.classList.remove('active');
@@ -25,16 +21,13 @@ projects.forEach(project => {
         if(otherArrow) otherArrow.style.transform = 'rotate(0deg)';
       }
     });
-
-    // Alterna el proyecto actual
+    
     project.classList.toggle('active');
 
-    // Alterna la flecha
     arrow.style.transform = project.classList.contains('active') 
       ? 'rotate(180deg)' 
       : 'rotate(0deg)';
 
-    // Alterna visibilidad de detalles
     if(details) details.style.display = project.classList.contains('active') ? 'block' : 'none';
   });
 });
