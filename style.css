@@ -367,7 +367,7 @@ nav li a:hover::after {
 .technologies .tech {
   background: #3B82F6;
   color: #FFFFFF;
-  padding: 6px 12px;
+  padding: 6px 11px;
   border-radius: 20px;
   font-size: 0.85rem;
 }
@@ -685,7 +685,7 @@ footer {
   }
 
   section {
-    padding: 40px 15px;
+    padding: 40px 0px;
   }
 
   .project {
