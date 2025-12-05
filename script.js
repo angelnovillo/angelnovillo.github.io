@@ -11,15 +11,34 @@ const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
   const btn = project.querySelector('.see-more');
+  const arrow = btn.querySelector('.arrow');
+  const details = project.querySelector('.project-details');
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
+
+    // Cierra otros proyectos
     projects.forEach(p => {
-      if(p !== project) p.classList.remove('active');
+      if(p !== project) {
+        p.classList.remove('active');
+        const otherArrow = p.querySelector('.arrow');
+        if(otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+      }
     });
+
+    // Alterna el proyecto actual
     project.classList.toggle('active');
+
+    // Alterna la flecha
+    arrow.style.transform = project.classList.contains('active') 
+      ? 'rotate(180deg)' 
+      : 'rotate(0deg)';
+
+    // Alterna visibilidad de detalles
+    if(details) details.style.display = project.classList.contains('active') ? 'block' : 'none';
   });
 });
+
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
