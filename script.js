@@ -9,26 +9,15 @@ const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
   const btn = project.querySelector('.see-more');
-  const arrow = btn.querySelector('.arrow');
-  const details = project.querySelector('.project-details');
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
+
     projects.forEach(p => {
-      if(p !== project) {
-        p.classList.remove('active');
-        const otherArrow = p.querySelector('.arrow');
-        if(otherArrow) otherArrow.style.transform = 'rotate(0deg)';
-      }
+      if(p !== project) p.classList.remove('active');
     });
-    
+
     project.classList.toggle('active');
-
-    arrow.style.transform = project.classList.contains('active') 
-      ? 'rotate(180deg)' 
-      : 'rotate(0deg)';
-
-    if(details) details.style.display = project.classList.contains('active') ? 'block' : 'none';
   });
 });
 
