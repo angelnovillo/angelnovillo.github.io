@@ -300,7 +300,7 @@ nav li a:hover::after {
   background-color: #1E293B;
   border-radius: 15px;
   padding: 30px;
-  min-height: 350px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -318,6 +318,11 @@ nav li a:hover::after {
   align-items: center;
   margin-top: auto;    /* Empuja al fondo vertical de la tarjeta */
 }
+
+.hidden-project .project-bottom {
+  margin-top: 25px;    /* Empuja al fondo vertical de la tarjeta */
+}
+
 
 .project-logo {
   width: 50px;
@@ -690,5 +695,13 @@ footer {
 
   .project {
     padding: 15px;
+  }
+
+  .container{
+    padding: 10px;
+  }
+
+  .project{
+    min-height: 220px;
   }
 }
