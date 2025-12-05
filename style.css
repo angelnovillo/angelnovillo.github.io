@@ -338,10 +338,6 @@ nav li a:hover::after {
   display: block;
 }
 
-/* --- TEXTO --- */
-.project p {
-}
-
 .hidden-project {
   display: none;
 }
@@ -427,6 +423,16 @@ nav li a:hover::after {
 
 .see-more:hover {
   transform: scale(1.05);
+}
+
+.see-more .arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project.active .see-more .arrow {
+  transform: rotate(180deg); /* gira 180° cuando el proyecto está activo */
 }
 
 /* Galería horizontal */
