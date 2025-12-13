@@ -5,6 +5,12 @@ toggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
+menu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+});
+
 const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
