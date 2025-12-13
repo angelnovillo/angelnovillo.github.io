@@ -35,6 +35,10 @@ window.addEventListener('scroll', () => {
   } else {
     header.classList.remove('scrolled');
   }
+
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
