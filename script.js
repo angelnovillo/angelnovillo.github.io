@@ -41,6 +41,28 @@ window.addEventListener('scroll', () => {
   }
 });
 
+document.addEventListener('click', (e) => {
+    if (!menu.classList.contains('active')) return;
+
+    const clickDentroMenu = menu.contains(e.target);
+    const clickEnBoton = toggle.contains(e.target);
+
+    if (!clickDentroMenu && !clickEnBoton) {
+      menu.classList.remove('active');
+    }
+  });
+
+document.addEventListener('touchstart', (e) => {
+  if (!menu.classList.contains('active')) return;
+
+  const touchDentroMenu = menu.contains(e.target);
+  const touchEnBoton = toggle.contains(e.target);
+
+  if (!touchDentroMenu && !touchEnBoton) {
+    menu.classList.remove('active');
+  }
+}, { passive: true });
+
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById('toggle-projects');
   const hiddenProjects = document.querySelectorAll('.hidden-project');
